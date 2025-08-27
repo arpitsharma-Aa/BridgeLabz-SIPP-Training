@@ -1,0 +1,28 @@
+class Q5_StudentReport {
+    String name;
+    int rollNumber;
+    int marks;
+
+    String calculateGrade() {
+        if (marks >= 90) return "A";
+        else if (marks >= 75) return "B";
+        else if (marks >= 60) return "C";
+        else if (marks >= 40) return "D";
+        else return "F";
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + calculateGrade());
+    }
+
+    public static void main(String[] args) {
+        Q5_StudentReport student = new Q5_StudentReport();
+        student.name = "Alice";
+        student.rollNumber = 101;
+        student.marks = 88;
+        student.displayDetails();
+    }
+}
